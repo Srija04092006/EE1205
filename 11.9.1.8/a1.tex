@@ -1,0 +1,51 @@
+\documentclass{article}
+\begin{document}
+\begin{center}
+Discrete Assignment\\
+Name : Palavelli Srija\\
+Roll No : EE23BTECH11045\\
+\end{center}
+PROBLEM STATEMENT(11.9.1  8th question) :Find the 7th term of the sequence where nth term of the sequence is given by  \(a_n = \frac{n^2}{2^n}\)\\ 
+ANSWER:\\
+Consider the sequence \(a_n\) defined as:
+\[ a_n = \frac{n^2}{2^n} \]
+
+Now, let's find the seventh term (\(a_7\)):
+\[ a_7 = \frac{7^2}{2^7} \]
+
+Calculating this expression gives:
+\[ a_7 = \frac{49}{128} \]
+
+Therefore, the seventh term (\(a_7\)) is \(\frac{49}{128}\).\\
+\begin{table}[h]
+    \centering
+    \caption{Parameters Table}
+    \begin{tabular}{|c|c|}
+                \hline
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline
+         $a_n$ &  $\frac{n^2}{2^n}$\\ \\
+	 $a_7$ & $\frac{49}{128}$\\
+        \hline   
+    \end{tabular}
+\end{table}
+
+The Z-transform of the sequence \(a_n = \frac{n^2}{2^n}\) is given by:
+\[ X(z) = \sum_{n=0}^{\infty} a_n z^{-n} \]
+
+Substitute \(a_n = \frac{n^2}{2^n}\) into the formula:
+\[ X(z) = \sum_{n=0}^{\infty} \frac{n^2}{2^n} z^{-n} \]
+
+To find \(X(z)\) for the seventh term (\(a_7\)), substitute \(n = 7\):
+\[ X(z) = \frac{7^2}{2^7} z^{-7} \]
+
+Therefore, the Z-transform of the seventh term (\(a_7\)) is:
+\[ X(z) = \frac{49}{128} z^{-7} \] \\
+The Region of Convergence (ROC) for a Z-transform expression is the set of values for which the series converges. For the Z-transform \(X(z) = \frac{49}{128} z^{-7}\), the ROC is the set of complex values \(z\) for which the series converges.
+
+In this case, the Z-transform term \(z^{-7}\) indicates that the ROC includes all values of \(z\) except possibly 0, as \(z = 0\) would result in division by zero.
+
+So, the ROC for \(X(z) = \frac{49}{128} z^{-7}\) is the entire complex plane excluding 0.
+
+Please note that the exact determination of the ROC often depends on the entire Z-transform expression and the convergence properties of the series. For simple terms like \(z^{-7}\), the ROC is often the entire complex plane excluding 0.
+\end{document}
