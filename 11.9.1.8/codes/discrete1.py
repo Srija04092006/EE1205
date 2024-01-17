@@ -1,21 +1,18 @@
-
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
-# Define the function for the nth term
-def a_n(n):
+def sequence_x(n):
     return n**2 / 2**n
 
-# Generate values for n
-n_values = np.arange(0, 11)  # Adjust the range as needed
+# Generate values for n from 0 to 10 (you can adjust this range)
+n_values = np.arange(0, 11)
+x_values = [sequence_x(n) for n in n_values]
 
-# Calculate corresponding values for a_n
-a_n_values = [a_n(n) for n in n_values]
-
-# Plot the graph
-plt.plot(n_values, a_n_values, marker='o')
-plt.title(r'Graph of $a_n = \frac{n^2}{2^n}$')
+# Plotting the sequence
+plt.plot(n_values, x_values, marker='o', linestyle='-', color='b')
+plt.title('Sequence $x(n) = \\frac{n^2}{2^n}$')
 plt.xlabel('n')
-plt.ylabel(r'$a_n$')
+plt.ylabel('$x(n)$')
 plt.grid(True)
 plt.show()
+
