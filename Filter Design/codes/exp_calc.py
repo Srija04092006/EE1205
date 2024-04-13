@@ -1,23 +1,16 @@
 from sympy import symbols, simplify
 
 # Define symbolic variable s
-s = symbols('s')
-
-# Constants
-omega0_val = 0.352
-B_val = 0.0884
-
-# Define s_L in terms of s, omega0, and B
-s_L = (s**2 + omega0_val**2) / (B_val * s)
+s_L = symbols('s_L')
 
 # Given roots
-s5 = -0.3913 - 0.4156j
-s6 = -0.3913 + 0.4156j
-s7 = -0.1621 + 1.0033j
-s8 = -0.1621 - 1.0033j
+s1 = -0.3913 - 0.4156j
+s2 = -0.3913 + 0.4156j
+s3 = -0.1621 + 1.0033j
+s4 = -0.1621 - 1.0033j
 
 # Define the given polynomial expression
-polynomial_expr = 0.3125 / ((s_L - s5) * (s_L - s6) * (s_L - s7) * (s_L - s8))
+polynomial_expr = 0.3125 / ((s_L - s1) * (s_L - s2) * (s_L - s3) * (s_L - s4))
 
 # Simplify the expression
 simplified_expr = simplify(polynomial_expr)
